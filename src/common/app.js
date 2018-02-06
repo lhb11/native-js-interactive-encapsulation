@@ -11,8 +11,7 @@ var hybrid = {
     install (Vue, options) {
         // 把当前的对象挂载到vue的全局
         Vue.prototype.$hybrid = this;
-        Vue.prototype.$eventHub= Vue.prototype.$eventHub || new Vue({ 
-            data:{'message':''}, template:'<div> {{message}} </ div>'});
+        Vue.prototype.$eventHub= Vue.prototype.$eventHub || new Vue({data:{'message':''}, template:'<div> {{message}} </ div>'});
         this.$eventHub = Vue.prototype.$eventHub;
 
         Vue.myGlobalMethod = function () {  // 1. 添加全局方法或属性，如: vue-custom-element
@@ -23,6 +22,12 @@ var hybrid = {
             bind (el, binding, vnode, oldVnode) {
                 // 逻辑...
                 console.log('我是全局的指令');
+                el.style.color = binding.value.color;
+                el.innerHTML = binding.value.text;
+            },
+            update (el, binding) {
+                el.style.color = binding.value.color;
+                el.innerHTML = binding.value.text;
             }
         });
         Vue.mixin({

@@ -1,8 +1,13 @@
-# native-js-interactive-encapsulation
+# 前言
 
 > vue和原生（ios和android）的交互封装
+  主要在项目中使用到vue和原生的交互，原生交互的方法必须挂载到window上，引入vue的作用域，挂载到vue的方法原生无法访问到，所以写一个app.js来完成原生和js的交互
 
-## Build Setup
+## 技术栈
+
+> vue + vue-router + webpack
+
+## 项目运行
 
 ``` bash
 # install dependencies
@@ -17,5 +22,3 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
