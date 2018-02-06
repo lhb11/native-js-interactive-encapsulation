@@ -3,7 +3,6 @@
     <h1>{{ msg }}</h1>
     <button @click="showInfo()">原生调用js方法</button>
     <button @click="showParam('参数传递222')">原生调用js方法传递参数</button>
-    <router-link to="sec">测试销毁</router-link>
   </div>
 </template>
 
@@ -12,7 +11,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'vue 和 原生的交互测试'
+      msg: '我是路由的第二个页面，测试销毁事件'
     }
   },
   created() {
@@ -34,10 +33,6 @@ export default {
     goBack(index) {
       console.log('组件之内的返回事件' + index);
     }
-  },
-  destroyed () {
-    console.log('移除监听的事件');
-    this.$eventHub.$off('goBack');
   }
 }
 </script>
