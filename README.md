@@ -15,10 +15,10 @@
 
 ## 效果图
 ## 原生调用组件中的事件演示
-<img src="https://github.com/lhb11/native-js-interactive-encapsulation/screenshots/native.gif"/>
+<img src="https://github.com/lhb11/native-js-interactive-encapsulation/tree/master/screenshots/native.gif"/>
 
 ## 回掉原生事件演示
-<img src="https://github.com/lhb11/native-js-interactive-encapsulation/screenshots/back.gif"/>
+<img src="https://github.com/lhb11/native-js-interactive-encapsulation/tree/master/screenshots/back.gif"/>
 
 
 ## 项目运行
