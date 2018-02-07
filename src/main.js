@@ -4,10 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import vConsole from 'vconsole'
+
+
 // 导入封装的组件
-import hybrid from './common/app';
+// import hybrid from './common/app';
 // 使用组件绑定
-Vue.use(hybrid, this);
+// Vue.use(hybrid, this);
+
+// 导入优化的封装类
+import opApp from './common/optimizeApp'
+console.log(window.$Hybrid);
+Vue.use(window.$Hybrid, this);
 
 Vue.config.productionTip = false
 // 手机页面上显示调试控制台
