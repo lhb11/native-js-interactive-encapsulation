@@ -5,7 +5,7 @@ import Sec from '@/components/Sec'
 
 Vue.use(Router)
 
-export default new Router({
+const routers =  new Router({
   routes: [
     {
       path: '/',
@@ -19,3 +19,20 @@ export default new Router({
     }
   ]
 })
+
+routers.beforeEach((to, from, next) => {
+//   console.log(to.path + '---' + from.path);
+// debugger
+//   const dd =  decodeURIComponent(to.path)
+//   console.log(to.query);
+//   console.log(dd);
+  next();
+})
+
+routers.afterEach((to, from) => {
+  // ...
+})
+
+export default routers;
+
+
