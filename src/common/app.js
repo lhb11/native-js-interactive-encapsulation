@@ -74,7 +74,6 @@ var hybrid = {
         this.$eventHub.$emit('goBack', index);
     }
 }
-console.log('111' + hybrid.type + "==app中");
 // 把vue中绑定的对象挂载到window上
 window.Hybrid = hybrid;
 // if (window.Vue) { // 自动绑定
